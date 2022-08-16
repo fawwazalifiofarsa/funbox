@@ -10,7 +10,6 @@ const router = require('express').Router();
 const {checkAdmin} = require('../../auth/token_admin')
 
 router.post('/', controllerAdd);
-router.post('/', checkAdmin, controllerAdd);
 router.get('/', checkAdmin, controllerGet);
 router.get('/:id', checkAdmin, controllerGetId);
 router.put('/:id', checkAdmin, controllerUpdate);
